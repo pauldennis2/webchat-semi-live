@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatApp</title>
+</head>
+<body>
+Chats for {{name}}:
+<form action="/refresh-chat" method="post">
+    <button type="submit">Refresh</button>
+</form>
+
+<form action="/send-chat" method="post">
+    <input type="text" placeholder="Chat here" name="chatText"/>
+    <button type="submit">Send Chat</button>
+</form>
+
+{{#chatLog}}
+<div>
+    Item: {{chat}}
+</div>
+{{/chatLog}}
+
+</body>
+</html>
